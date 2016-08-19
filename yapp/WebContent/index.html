@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<title>메인 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Lato">
+<style>
+html, body, h1, h2, h3, h4, h5 {
+	font-family: "Lato", sans-serif
+}
+
+.mySlides {
+	display: none
+}
+
+.w3-left, .w3-right, .w3-tag {
+	cursor: pointer
+}
+
+.w3-tag {
+	height: 15px;
+	width: 15px;
+	padding: 0;
+	margin-top: 6px
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+	position: fixed;
+	bottom: 0;
+	background-color: #fefefe;
+	width: 100%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+/* Add Animation */
+@
+-webkit-keyframes slideIn {
+	from {bottom: -300px;
+	opacity: 0
+}
+
+to {
+	bottom: 0;
+	opacity: 1
+}
+
+}
+@
+keyframes slideIn {
+	from {bottom: -300px;
+	opacity: 0
+}
+
+to {
+	bottom: 0;
+	opacity: 1
+}
+
+}
+@
+-webkit-keyframes fadeIn {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+
+}
+@
+keyframes fadeIn {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+}
+</style>
+<body>
+
+	<!-- Navbar -->
+	<ul
+		class="w3-navbar w3-left-align w3-light-grey w3-center w3-top w3-large">
+		<li class="w3-left" style="width: 60% !important"><a
+			href="index.html">LOGO[이미지]</a></li>
+		<li class="w3-left" style="width: 10% !important" id="myBtn"><a
+			href="javascript:void(0)">로그인</a></li>
+		<li class="w3-left" style="width: 10% !important"><a
+			href="javascript:void(0)" class="w3-text-teal">회원가입</a></li>
+		<li class="w3-left" style="width: 10% !important"><a
+			href="javascript:void(0)">마이페이지</a></li>
+		<li class="w3-left" style="width: 10% !important"><a
+			href="search.html">검색</a></li>
+	</ul>
+
+
+	<!-- Slideshow next/previous buttons -->
+	<div class="w3-content" style="max-width: 100%; position: relative">
+
+		<!-- Slideshow -->
+		<div class="w3-display-container mySlides">
+			<img src="img/muse.jpg" style="width: 100%">
+			<div
+				class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
+				<span class="w3-white w3-padding-large w3-animate-bottom"><a
+					href="mkgroup.html">모임만들기[이미지]</a></span>
+			</div>
+		</div>
+		<div class="w3-display-container mySlides">
+			<img src="img/bg.jpg" style="width: 100%">
+			<div
+				class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
+				<span class="w3-white w3-padding-large w3-animate-bottom"><a
+					href="mkgroup.html">모임만들기[이미지]</a></span>
+			</div>
+		</div>
+
+
+
+		<a class="w3-btn-floating-large"
+			style="position: absolute; top: 45%; left: 0" onclick="plusDivs(-1)">❮</a>
+		<a class="w3-btn-floating-large"
+			style="position: absolute; top: 45%; right: 0" onclick="plusDivs(1)">❯</a>
+
+	</div>
+
+
+	<!-- Grid -->
+	<div class="w3-row" style="margin: 0 auto; max-width: 1040px;">
+		<div class="w3-center w3-padding-64">
+			<span
+				class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">베스트
+				모임</span>
+		</div>
+
+		<div class="w3-third w3-margin-bottom">
+			<div class="w3-card-4">
+				<div class="w3-row-padding">
+					<img src="img/bg.jpg" alt="Norway" style="width: 100%">
+					<div class="w3-container">
+						<h3>John Doe</h3>
+						<p class="w3-opacity">CEO & Founder</p>
+						<p>Phasellus eget enim eu lectus faucibus vestibulum.
+							Suspendisse sodales pellentesque elementum.</p>
+						<p>
+							<button class="w3-btn" onclick="location.href='group.html'">Contact</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="w3-third w3-margin-bottom">
+			<div class="w3-card-4">
+				<div class="w3-row-padding">
+					<img src="img/bg.jpg" alt="Norway" style="width: 100%">
+					<div class="w3-container">
+						<h3>Mike Ross</h3>
+						<p class="w3-opacity">Art Director</p>
+						<p>Phasellus eget enim eu lectus faucibus vestibulum.
+							Suspendisse sodales pellentesque elementum.</p>
+						<p>
+							<button class="w3-btn">Contact</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="w3-third w3-margin-bottom">
+			<div class="w3-card-4">
+				<div class="w3-row-padding">
+					<img src="img/bg.jpg" alt="Norway" style="width: 100%">
+					<div class="w3-container">
+						<h3>Jane Doe</h3>
+						<p class="w3-opacity">Designer</p>
+						<p>Phasellus eget enim eu lectus faucibus vestibulum.
+							Suspendisse sodales pellentesque elementum.</p>
+						<p>
+							<button class="w3-btn">Contact</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+	<!-- Grid -->
+	<div class="w3-row-padding" style="margin: 0 -16px">
+		<div class="w3-center w3-padding-64">
+			<h3>개인별 매칭</h3>
+			<p>오늘의 2인</p>
+		</div>
+	</div>
+
+
+	<div class="w3-half w3-margin-bottom">
+		<div class="w3-card-4">
+			<div class="w3-row-padding">
+				<img src="img/den.jpg" alt="Norway" style="width: 100%">
+				<div class="w3-container">
+					<h3>Jane Doe</h3>
+					<p class="w3-opacity">Designer</p>
+					<p>Phasellus eget enim eu lectus faucibus vestibulum.
+						Suspendisse sodales pellentesque elementum.</p>
+					<p>
+						<button class="w3-btn">Contact</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="w3-half w3-margin-bottom">
+		<div class="w3-card-4">
+			<div class="w3-row-padding">
+				<img src="img/den.jpg" alt="Norway" style="width: 100%">
+				<div class="w3-container">
+					<h3>Mike Ross</h3>
+					<p class="w3-opacity">Art Director</p>
+					<p>Phasellus eget enim eu lectus faucibus vestibulum.
+						Suspendisse sodales pellentesque elementum.</p>
+					<p>
+						<button class="w3-btn">Contact</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+	<!-- Grid -->
+	<div class="w3-row-padding" style="margin: 0 -16px">
+		<div class="w3-center w3-padding-64">
+			<h3>모임</h3>
+			<p>카테고리</p>
+
+
+			<div class="w3-row-padding w3-section w3-blue"
+				style="margin: 0 auto; max-width: 1040px;">
+				<a class="w3-btn-floating-large w3-teal">학문</a> <a
+					class="w3-btn-floating-large w3-teal">여행</a> <a
+					class="w3-btn-floating-large w3-teal">운동</a> <a
+					class="w3-btn-floating-large w3-teal">음악</a> <a
+					class="w3-btn-floating-large w3-teal">요리</a> <a
+					class="w3-btn-floating-large w3-teal">문화</a> <a
+					class="w3-btn-floating-large w3-teal">DLY</a> <a
+					class="w3-btn-floating-large w3-teal">기타</a>
+
+				<div class="w3-row-padding w3-section">
+
+					<div class="w3-third">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="w3-third">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="w3-third">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="w3-third">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times</span>
+				<h2>Modal Header</h2>
+			</div>
+			<div class="modal-body">
+				<p>Some text in the Modal Body</p>
+				<p>Some other text...</p>
+			</div>
+			<div class="modal-footer">
+				<h3>Modal Footer</h3>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-32 w3-teal w3-center">
+		<h4>LOGO[이미지]</h4>
+		<!-- <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+	</footer>
+
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = x.length
+			}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			x[slideIndex - 1].style.display = "block";
+		}
+		
+		
+		
+		
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+		    modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+	</script>
+
+</body>
+</html>
