@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<title>메인 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Lato">
+<link href="css/login.css" rel="stylesheet">
+<style>
+html, body, h1, h2, h3, h4, h5 {
+	font-family: "Lato", sans-serif
+}
+
+.mySlides {
+	display: none
+}
+
+.w3-left, .w3-right, .w3-tag {
+	cursor: pointer
+}
+
+.w3-tag {
+	height: 15px;
+	width: 15px;
+	padding: 0;
+	margin-top: 6px
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+	position: fixed;
+	bottom: 0;
+	background-color: #fefefe;
+	width: 100%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+/* Add Animation */
+@
+-webkit-keyframes slideIn {
+	from {bottom: -300px;
+	opacity: 0
+}
+
+to {
+	bottom: 0;
+	opacity: 1
+}
+
+}
+@
+keyframes slideIn {
+	from {bottom: -300px;
+	opacity: 0
+}
+
+to {
+	bottom: 0;
+	opacity: 1
+}
+
+}
+@
+-webkit-keyframes fadeIn {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+
+}
+@
+keyframes fadeIn {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+
+}
+.form-signin {
+	max-width: 400px;
+	display: block;
+	background-color: #f7f7f7;
+	-moz-box-shadow: 0 0 3px 3px #888;
+	-webkit-box-shadow: 0 0 3px 3px #888;
+	box-shadow: 0 0 3px 3px #888;
+	border-radius: 2px;
+}
+
+.main {
+	padding: 38px;
+}
+
+.social-box {
+	margin: 0 auto;
+	padding: 15px;
+	border-bottom: 1px #ccc solid;
+}
+
+.social-box a {
+	font-weight: bold;
+	font-size: 18px;
+	padding: 8px;
+}
+
+.social-box a i {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.heading-desc {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 38px 38px 0px 38px;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+	font-weight: normal;
+}
+
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: 20px;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.login-footer {
+	background: #f0f0f0;
+	margin: 0 auto;
+	border-top: 1px solid #dadada;
+	padding: 20px;
+}
+
+.login-footer .left-section a {
+	font-weight: bold;
+	color: #8a8a8a;
+	line-height: 19px;
+}
+
+.mg-btm {
+	margin-bottom: 20px;
+}
+</style>
+<body>
+
+	<!-- Grid -->
+	<div class="w3-row" style="margin: 0 auto; max-width: 400px;">
+		<div class="w3-center w3-padding-64"></div>
+		<img src="img/bg.jpg" alt="Norway"
+			style="width: 168px; max-height: 35px; margin-right: 130px; margin-left: 45px; margin-top: 36px;">
+		<img src="img/email-01.png" alt="Norway"
+			style="width: 20px; height: 20px; margin-top: 42px;"> <input
+			type="text" class="form-control" placeholder="이메일" autofocus
+			style="margin-top: 34px; margin-bottom: 5px;"> <input
+			type="text" class="form-control" placeholder="비밀번호" autofocus
+			style="margin-bottom: 5px;"> <input type="text"
+			class="form-control" placeholder="비밀번호 재확인" autofocus
+			style="margin-bottom: 5px;"> <input type="text"
+			class="form-control" placeholder="이름" autofocus
+			style="margin-top: 25px;"> <input type="date"
+			class="form-control">
+
+
+		<div class="w3-btn-group" style="width: 400px; text-align: center;">
+
+			<button class="w3-btn w3-white w3-border w3-hover-teal"
+				style="width: 200px; text-align: center;">남자</button>
+			<button class="w3-btn w3-white w3-border w3-hover-teal"
+				style="width: 200px; text-align: center;">여자</button>
+
+		</div>
+
+
+		<p
+			style="font-size: 18px; margin-top: 27px; text-align: center; margin-top: 25px;">관심
+			카테고리를 선택해주세요</p>
+
+
+
+		<div class="w3-teal" style="margin: 0 auto; max-width: 300px;">
+			<img src="img/bg.jpg" class="img-circle" alt="Cinque Terre"
+				width="52.5" height="52.5"
+				style="margin-right: 27px; margin-bottom: 6px;"> <img
+				src="img/bg.jpg" class="img-circle" alt="Cinque Terre" width="52.5"
+				height="52.5" style="margin-right: 27px; margin-bottom: 6px;">
+			<img src="img/bg.jpg" class="img-circle" alt="Cinque Terre"
+				width="52.5" height="52.5"
+				style="margin-right: 27px; margin-bottom: 6px;"> <img
+				src="img/bg.jpg" class="img-circle" alt="Cinque Terre" width="52.5"
+				height="52.5" style="margin-bottom: 6px; margin-bottom: 6px;">
+
+			<p style="margin-left: 16px; margin-right: 65px;">운동</p>
+
+
+
+
+
+			<div class="w3-teal" style="margin: 0 auto; max-width: 300px;">
+				<img src="img/bg.jpg" class="img-circle" alt="Cinque Terre"
+					width="52.5" height="52.5" style="margin-right: 27px;"> <img
+					src="img/bg.jpg" class="img-circle" alt="Cinque Terre" width="52.5"
+					height="52.5" style="margin-right: 27px;"> <img
+					src="img/bg.jpg" class="img-circle" alt="Cinque Terre" width="52.5"
+					height="52.5" style="margin-right: 27px;"> <img
+					src="img/bg.jpg" class="img-circle" alt="Cinque Terre" width="52.5"
+					height="52.5">
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

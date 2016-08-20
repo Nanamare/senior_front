@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Lato">
+<link href="css/login.css" rel="stylesheet">
 <style>
 html, body, h1, h2, h3, h4, h5 {
 	font-family: "Lato", sans-serif
@@ -13,10 +16,12 @@ html, body, h1, h2, h3, h4, h5 {
 
 .mySlides {
 	display: none
+	
 }
 
 .w3-left, .w3-right, .w3-tag {
 	cursor: pointer
+	
 }
 
 .w3-tag {
@@ -24,6 +29,7 @@ html, body, h1, h2, h3, h4, h5 {
 	width: 15px;
 	padding: 0;
 	margin-top: 6px
+	
 }
 
 /* The Modal (background) */
@@ -129,10 +135,104 @@ keyframes fadeIn {
 to {
 	opacity: 1
 }
+
+}
+.form-signin {
+	max-width: 400px;
+	display: block;
+	background-color: #f7f7f7;
+	-moz-box-shadow: 0 0 3px 3px #888;
+	-webkit-box-shadow: 0 0 3px 3px #888;
+	box-shadow: 0 0 3px 3px #888;
+	border-radius: 2px;
+}
+
+.main {
+	padding: 38px;
+}
+
+.social-box {
+	margin: 0 auto;
+	padding: 15px;
+	border-bottom: 1px #ccc solid;
+}
+
+.social-box a {
+	font-weight: bold;
+	font-size: 18px;
+	padding: 8px;
+}
+
+.social-box a i {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.heading-desc {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 38px 38px 0px 38px;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+	font-weight: normal;
+}
+
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: 20px;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.login-footer {
+	background: #f0f0f0;
+	margin: 0 auto;
+	border-top: 1px solid #dadada;
+	padding: 20px;
+}
+
+.login-footer .left-section a {
+	font-weight: bold;
+	color: #8a8a8a;
+	line-height: 19px;
+}
+
+.mg-btm {
+	margin-bottom: 20px;
 }
 </style>
 <body>
 
+
+	<!-- Slideshow next/previous buttons -->
+	<div class="w3-content" style="max-width: 100%; position: relative">
+
+		<!-- Slideshow -->
+		<div class="w3-display-container mySlides">
+			<img src="img/bg.png" style="width:100%; height:745px;">
+			
 	<!-- Navbar -->
 	<ul
 		class="w3-navbar w3-left-align w3-light-grey w3-center w3-top w3-large">
@@ -141,20 +241,13 @@ to {
 		<li class="w3-left" style="width: 10% !important" id="myBtn"><a
 			href="javascript:void(0)">로그인</a></li>
 		<li class="w3-left" style="width: 10% !important"><a
-			href="javascript:void(0)" class="w3-text-teal">회원가입</a></li>
+			href="javascript:void(0)" class="w3-text-teal" id="myBtn2">회원가입</a></li>
 		<li class="w3-left" style="width: 10% !important"><a
 			href="javascript:void(0)">마이페이지</a></li>
 		<li class="w3-left" style="width: 10% !important"><a
 			href="search.html">검색</a></li>
 	</ul>
-
-
-	<!-- Slideshow next/previous buttons -->
-	<div class="w3-content" style="max-width: 100%; position: relative">
-
-		<!-- Slideshow -->
-		<div class="w3-display-container mySlides">
-			<img src="img/muse.jpg" style="width: 100%">
+	
 			<div
 				class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
 				<span class="w3-white w3-padding-large w3-animate-bottom"><a
@@ -162,7 +255,23 @@ to {
 			</div>
 		</div>
 		<div class="w3-display-container mySlides">
-			<img src="img/bg.jpg" style="width: 100%">
+			<img src="img/bg.png" style="width: 100%; height:745px;">
+			
+			<!-- Navbar -->
+	<ul
+		class="w3-navbar w3-left-align w3-light-grey w3-center w3-top w3-large">
+		<li class="w3-left" style="width: 60% !important"><a
+			href="index.html">LOGO[이미지]</a></li>
+		<li class="w3-left" style="width: 10% !important" id="myBtn"><a
+			href="javascript:void(0)">로그인</a></li>
+		<li class="w3-left" style="width: 10% !important"><a
+			href="javascript:void(0)" class="w3-text-teal" id="myBtn2">회원가입</a></li>
+		<li class="w3-left" style="width: 10% !important"><a
+			href="javascript:void(0)">마이페이지</a></li>
+		<li class="w3-left" style="width: 10% !important"><a
+			href="search.html">검색</a></li>
+	</ul>
+			
 			<div
 				class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
 				<span class="w3-white w3-padding-large w3-animate-bottom"><a
@@ -181,7 +290,7 @@ to {
 
 
 	<!-- Grid -->
-	<div class="w3-row" style="margin: 0 auto; max-width: 1040px;">
+	<div class="w3-row" style="margin: 0 auto; max-width: 1024px;">
 		<div class="w3-center w3-padding-64">
 			<span
 				class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">베스트
@@ -191,7 +300,7 @@ to {
 		<div class="w3-third w3-margin-bottom">
 			<div class="w3-card-4">
 				<div class="w3-row-padding">
-					<img src="img/bg.jpg" alt="Norway" style="width: 100%">
+					<img src="img/cardbg.png" alt="Norway" style="width: 100%">
 					<div class="w3-container">
 						<h3>John Doe</h3>
 						<p class="w3-opacity">CEO & Founder</p>
@@ -208,7 +317,7 @@ to {
 		<div class="w3-third w3-margin-bottom">
 			<div class="w3-card-4">
 				<div class="w3-row-padding">
-					<img src="img/bg.jpg" alt="Norway" style="width: 100%">
+					<img src="img/cardbg.png" alt="Norway" style="width: 100%">
 					<div class="w3-container">
 						<h3>Mike Ross</h3>
 						<p class="w3-opacity">Art Director</p>
@@ -225,7 +334,7 @@ to {
 		<div class="w3-third w3-margin-bottom">
 			<div class="w3-card-4">
 				<div class="w3-row-padding">
-					<img src="img/bg.jpg" alt="Norway" style="width: 100%">
+					<img src="img/cardbg.png" alt="Norway" style="width: 100%">
 					<div class="w3-container">
 						<h3>Jane Doe</h3>
 						<p class="w3-opacity">Designer</p>
@@ -240,7 +349,7 @@ to {
 		</div>
 	</div>
 
-	</div>
+
 
 	<!-- Grid -->
 	<div class="w3-row-padding" style="margin: 0 -16px">
@@ -352,7 +461,7 @@ to {
 					</div>
 
 
-					<div class="w3-third">
+					<div class="w3-third" style="padding-top: 10px;">
 						<div class="w3-card-2 w3-teal">
 							<img src="img/exam1.jpg" alt="London" style="width: 100%">
 							<div class="w3-container">
@@ -366,6 +475,67 @@ to {
 						</div>
 					</div>
 
+
+					<div class="w3-third" style="padding-top: 10px;">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="w3-third" style="padding-top: 10px;">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="w3-third" style="padding-top: 10px;">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="w3-third" style="padding-top: 10px;">
+						<div class="w3-card-2 w3-teal">
+							<img src="img/exam1.jpg" alt="London" style="width: 100%">
+							<div class="w3-container">
+								<p>London is the capital city of England.</p>
+								<p>It is the most populous city in the United Kingdom, with
+									a metropolitan area of over 13 million inhabitants.</p>
+								<p>
+									<button class="w3-btn w3-white">Contact</button>
+								</p>
+							</div>
+						</div>
+					</div>
+
+
+
+
 				</div>
 			</div>
 		</div>
@@ -377,21 +547,154 @@ to {
 	<div id="myModal" class="modal">
 
 		<!-- Modal content -->
-		<div class="modal-content">
-			<div class="modal-header">
-				<span class="close">&times</span>
-				<h2>Modal Header</h2>
-			</div>
-			<div class="modal-body">
-				<p>Some text in the Modal Body</p>
-				<p>Some other text...</p>
-			</div>
-			<div class="modal-footer">
-				<h3>Modal Footer</h3>
+		<div class="container">
+			<div class="row">
+				<form class="form-signin mg-btm" style="margin: auto">
+					<h3 class="heading-desc">
+						<button type="button" class="close pull-right" aria-hidden="true">×</button>
+						Login to Senior
+					</h3>
+					<div class="social-box">
+						<div class="row mg-btm">
+							<div class="col-md-12">
+								<a href="#" class="btn btn-primary btn-block"> <i
+									class="icon-facebook"></i>    Login with Facebook
+								</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="main">
+						<input type="text" class="form-control" placeholder="Email"
+							autofocus> <input type="password" class="form-control"
+							placeholder="Password"> 기업 등록 문의 <a href=""> 여기를
+							클릭해주세요</a> <span class="clearfix"></span>
+					</div>
+					<div class="social-box">
+						<div class="row">
+							<div class="col-md-12">
+								<a href="#" class="btn btn-info btn-block"> <i
+									class="icon-twitter"></i>    회원가입
+								</a>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12" style="padding-top: 5px;">
+								<a href="#" class="btn btn-info btn-block"> <i
+									class="icon-twitter"></i>    로그인
+								</a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="login-footer">
+						<div class="row">
+							<div class="col-xs-6 col-md-6">
+								<div class="left-section">
+									<a href="">Forgot your password?</a>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</form>
 			</div>
 		</div>
 
 	</div>
+
+
+
+	<!-- The Modal -->
+	<div id="myjoin" class="modal">
+
+		<!-- Grid -->
+
+		<div class="w3-center w3-padding-64"></div>
+		<div class="w3-row w3-white" style="margin: 0 auto; max-width: 400px;">
+			<img src="img/bg.png" alt="Norway"
+				style="width: 168px; max-height: 35px; margin-right: 130px; margin-left: 45px; margin-top: 36px;">
+			<a href="javascript:void" target="_blank"><img
+				src="img/cancel_btn-01.png" alt="Norway"
+				style="width: 20px; height: 20px; margin-top: 42px;"></a> <input
+				type="text" class="form-control" placeholder="이메일" autofocus
+				style="margin-top: 34px; margin-bottom: 5px;"> <input
+				type="text" class="form-control" placeholder="비밀번호" autofocus
+				style="margin-bottom: 5px;"> <input type="text"
+				class="form-control" placeholder="비밀번호 재확인" autofocus
+				style="margin-bottom: 5px;"> <input type="text"
+				class="form-control" placeholder="이름" autofocus
+				style="margin-top: 25px;"> <input type="date"
+				class="form-control">
+
+
+			<div class="w3-btn-group" style="width: 400px; text-align: center;">
+
+				<button class="w3-btn w3-white w3-border w3-hover-teal"
+					style="width: 200px; text-align: center;">남자</button>
+				<button class="w3-btn w3-white w3-border w3-hover-teal"
+					style="width: 200px; text-align: center;">여자</button>
+
+			</div>
+
+
+			<p
+				style="font-size: 18px; margin-top: 27px; text-align: center; margin-top: 25px;">관심
+				카테고리를 선택해주세요</p>
+
+
+
+			<div class="w3-teal" style="margin: 0 auto; max-width: 300px;">
+				<img src="img/bg.png" class="img-circle" alt="Cinque Terre"
+					width="52.5" height="52.5"
+					style="margin-right: 27px; margin-bottom: 6px;"> <img
+					src="img/cancel_btn-01.png" class="img-circle" alt="Cinque Terre"
+					width="52.5" height="52.5"
+					style="margin-right: 27px; margin-bottom: 6px;"> <img
+					src="img/bg.png" class="img-circle" alt="Cinque Terre" width="52.5"
+					height="52.5" style="margin-right: 27px; margin-bottom: 6px;">
+				<img src="img/bg.png" class="img-circle" alt="Cinque Terre"
+					width="52.5" height="52.5"
+					style="margin-bottom: 6px; margin-bottom: 6px;"> <b
+					style="margin-left: 16px; margin-right: 48px;">운동</b> <b
+					style="margin-right: 48px;">운동</b> <b style="margin-right: 48px;">운동</b>
+				<b>운동</b>
+
+
+
+
+
+
+
+				<div class="w3-teal" style="margin: 0 auto; max-width: 300px;">
+					<img src="img/bg.png" class="img-circle" alt="Cinque Terre"
+						width="52.5" height="52.5" style="margin-right: 27px;"> <img
+						src="img/bg.png" class="img-circle" alt="Cinque Terre"
+						width="52.5" height="52.5" style="margin-right: 27px;"> <img
+						src="img/bg.png" class="img-circle" alt="Cinque Terre"
+						width="52.5" height="52.5" style="margin-right: 27px;"> <img
+						src="img/bg.png" class="img-circle" alt="Cinque Terre"
+						width="52.5" height="52.5"> <b
+						style="margin-left: 16px; margin-right: 48px;">운동</b> <b
+						style="margin-right: 48px;">운동</b> <b style="margin-right: 48px;">운동</b>
+					<b>운동</b>
+
+				</div>
+			</div>
+			<div class="w3-btn-group" style="width: 400px; text-align: center;">
+				<button class="w3-btn-block w3-teal w3-hover-black"
+					style="max-width: 400px; text-align: center; margin-top: 24px; margin-bottom: 27px;">시니어
+					가입하기</button>
+			</div>
+		</div>
+
+
+	</div>
+
+
 
 
 
@@ -427,10 +730,7 @@ to {
 			}
 			x[slideIndex - 1].style.display = "block";
 		}
-		
-		
-		
-		
+
 		// Get the modal
 		var modal = document.getElementById('myModal');
 
@@ -442,19 +742,45 @@ to {
 
 		// When the user clicks the button, open the modal
 		btn.onclick = function() {
-		    modal.style.display = "block";
+			modal.style.display = "block";
 		}
 
 		// When the user clicks on <span> (x), close the modal
 		span.onclick = function() {
-		    modal.style.display = "none";
+			modal.style.display = "none";
 		}
 
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
-		    if (event.target == modal) {
-		        modal.style.display = "none";
-		    }
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+
+		// Get the modal
+		var modal2 = document.getElementById('myjoin');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn2");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+			modal2.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal2.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal2) {
+				modal2.style.display = "none";
+			}
 		}
 	</script>
 

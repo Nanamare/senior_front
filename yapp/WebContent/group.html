@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 <style>
 html, body, h1, h2, h3, h4, h5 {
 	font-family: "Lato", sans-serif
@@ -29,6 +32,197 @@ html, body, h1, h2, h3, h4, h5 {
 .city {
 	display: none;
 }
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+	position: fixed;
+	bottom: 0;
+	background-color: #fefefe;
+	width: 100%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+}
+
+/* Add Animation */
+@
+-webkit-keyframes slideIn {
+	from {bottom: -300px;
+	opacity: 0
+}
+
+to {
+	bottom: 0;
+	opacity: 1
+}
+
+}
+@
+keyframes slideIn {
+	from {bottom: -300px;
+	opacity: 0
+}
+
+to {
+	bottom: 0;
+	opacity: 1
+}
+
+}
+@
+-webkit-keyframes fadeIn {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+
+}
+@
+keyframes fadeIn {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+
+}
+.form-signin {
+	max-width: 400px;
+	display: block;
+	background-color: #f7f7f7;
+	-moz-box-shadow: 0 0 3px 3px #888;
+	-webkit-box-shadow: 0 0 3px 3px #888;
+	box-shadow: 0 0 3px 3px #888;
+	border-radius: 2px;
+}
+
+.main {
+	padding: 38px;
+}
+
+.social-box {
+	margin: 0 auto;
+	padding: 15px;
+	border-bottom: 1px #ccc solid;
+}
+
+.social-box a {
+	font-weight: bold;
+	font-size: 18px;
+	padding: 8px;
+}
+
+.social-box a i {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.heading-desc {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 38px 38px 0px 38px;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+	font-weight: normal;
+}
+
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: 20px;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.login-footer {
+	background: #f0f0f0;
+	margin: 0 auto;
+	border-top: 1px solid #dadada;
+	padding: 20px;
+}
+
+.login-footer .left-section a {
+	font-weight: bold;
+	color: #8a8a8a;
+	line-height: 19px;
+}
+
+.mg-btm {
+	margin-bottom: 20px;
+}
 </style>
 <body>
 
@@ -37,7 +231,7 @@ html, body, h1, h2, h3, h4, h5 {
 		class="w3-navbar w3-left-align w3-light-grey w3-center w3-top w3-large">
 		<li class="w3-left" style="width: 60% !important"><a
 			href="index.html">LOGO[이미지]</a></li>
-		<li class="w3-left" style="width: 10% !important"><a
+		<li class="w3-left" style="width: 10% !important" id="myBtn"><a
 			href="javascript:void(0)">로그인</a></li>
 		<li class="w3-left" style="width: 10% !important"><a
 			href="javascript:void(0)" class="w3-text-teal">회원가입</a></li>
@@ -46,7 +240,6 @@ html, body, h1, h2, h3, h4, h5 {
 		<li class="w3-left" style="width: 10% !important"><a
 			href="search.html">검색</a></li>
 	</ul>
-
 
 	<!-- Slideshow next/previous buttons -->
 	<div class="w3-content" style="max-width: 100%; position: relative">
@@ -85,6 +278,71 @@ html, body, h1, h2, h3, h4, h5 {
 		<p>장소는 어디인가요.</p>
 		<P>가격은 얼마 인가요</P>
 	</div>
+
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="container">
+			<div class="row">
+				<form class="form-signin mg-btm" style="margin: auto">
+					<h3 class="heading-desc">
+						<button type="button" class="close pull-right" aria-hidden="true">×</button>
+						Login to Senior
+					</h3>
+					<div class="social-box">
+						<div class="row mg-btm">
+							<div class="col-md-12">
+								<a href="#" class="btn btn-primary btn-block"> <i
+									class="icon-facebook"></i>    Login with Facebook
+								</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="main">
+						<input type="text" class="form-control" placeholder="Email"
+							autofocus> <input type="password" class="form-control"
+							placeholder="Password"> 기업 등록 문의 <a href=""> 여기를
+							클릭해주세요</a> <span class="clearfix"></span>
+					</div>
+					<div class="social-box">
+						<div class="row">
+							<div class="col-md-12">
+								<a href="#" class="btn btn-info btn-block"> <i
+									class="icon-twitter"></i>    회원가입
+								</a>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12" style="padding-top: 5px;">
+								<a href="#" class="btn btn-info btn-block"> <i
+									class="icon-twitter"></i>    로그인
+								</a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="login-footer">
+						<div class="row">
+							<div class="col-xs-6 col-md-6">
+								<div class="left-section">
+									<a href="">Forgot your password?</a>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
 
 
 	<!-- Footer -->
@@ -133,6 +391,35 @@ html, body, h1, h2, h3, h4, h5 {
 			document.getElementById(cityName).style.display = "block";
 			evt.currentTarget.className += " w3-red";
 		}
+		
+		
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+		    modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+
+		
 	</script>
 
 </body>
